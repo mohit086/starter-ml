@@ -35,10 +35,3 @@ duration = float(input("Enter duration of exercise (in minutes) : "))
 features = [gender, age, height, weight, heart_rate, body_temp, duration]
 
 print(f"\nPredicted calories burnt: {predict_calories(features, theta):.2f}") # Calculating the calories
-
-predicted_values = np.dot(X, theta)
-total_sum_squares = np.sum((y - np.mean(y))**2)
-residual_sum_squares = np.sum((y - predicted_values)**2)
-r_squared = 1 - (residual_sum_squares / total_sum_squares)
-
-print(f"R^2 score: {r_squared:.2f}")
